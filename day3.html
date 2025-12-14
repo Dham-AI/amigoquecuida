@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dia 3</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"> <!-- Link para o Font Awesome -->
+</head>
+<body id="body_day3">
+    <button class="btn-back" onclick="voltarParaHome()">
+        <i class="fas fa-arrow-left"></i>
+    </button>
+
+    <div class="day3-container">
+        <!-- Música tocando automaticamente -->
+        <audio id="music" autoplay loop>
+            <source src="./Músicas/Bruno Mars - Just The Way You Are (Lyrics).mp3" type="audio/mp3">
+        </audio>
+
+        <!-- Frase Motivacional -->
+        <div class="motivational-text-day3">
+            <p>Sua liderança inspira porque é verdadeira e segura, e do jeito que você é consegue motivar todos ao seu redor a acreditarem mais em si mesmos e no que fazem. Continue sendo essa luz que transforma desafios em conquistas. Sua liderança inspira porque é verdadeira e segura, e do jeito que você é consegue motivar todos ao seu redor a acreditarem mais em si mesmos e no que fazem. Continue sendo essa luz que transforma desafios em conquistas.</p>
+        </div>
+
+        <button id="btnRevelar" class="btn btn-revelar">Surpresa 🤭</button>
+
+        <!-- Overlay do popup -->
+        <div id="revealOverlay" class="reveal-overlay hidden" aria-hidden="true">
+            <img id="revealImg" class="reveal-img" alt="revelação" />
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

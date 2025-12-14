@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css2?family=Limelight&family=Montserrat:ital,wght@0,100..900;1,100..900&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100..900&display=swap');
+
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#body_principal {
+    font-family: Arial, sans-serif;
+    background-image: url('./Imagens/Fundos/salatrabbesemnada.jpeg'); /* Caminho da imagem */
+    background-size: cover; /* A imagem cobre toda a tela */
+    background-position: center; /* Alinha a imagem no centro */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+#body_day1 {
+    font-family: Arial, sans-serif;
+    background-image: url('./Imagens/Fundos/kamilapc.png'); /* Caminho da imagem */
+    background-size: cover; /* A imagem cobre toda a tela */
+    background-position: center; /* Alinha a imagem no centro */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+#body_day2 {
+    font-family: Arial, sans-serif;
+    background-image: url('./Imagens/Fundos/kamilafone.png'); /* Caminho da imagem */
+    background-size: cover; /* A imagem cobre toda a tela */
+    background-position: center; /* Alinha a imagem no centro */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+#body_day3 {
+    font-family: Arial, sans-serif;
+    background-image: url('./Imagens/Fundos/kamilasolo.png'); /* Caminho da imagem */
+    background-size: cover; /* A imagem cobre toda a tela */
+    background-position: center; /* Alinha a imagem no centro */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+
+
+/* Container da página do Dia 1 */
+.day1-container {
+    text-align: center;
+    position: relative;
+}
+
+.day2-container {
+    text-align: center;
+    position: relative;
+}
+
+.day3-container {
+    text-align: center;
+    position: relative;
+}
+
+/* Disco de Música */
+.music-disk {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Ajusta o tamanho do disco */
+    opacity: 0.6;
+}
+
+.disk {
+    width: 250px; /* Ajusta o tamanho do disco */
+    height: 250px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border: 10px solid #fff; /* Borda do disco */
+    animation: rotate 12s linear infinite; /* A rotação agora demora mais tempo */
+}
+
+.image {
+    width: 225px;
+    height: 225px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+}
+
+/* Animação de rotação (faixinha no final do círculo) */
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    99% {
+        transform: rotate(359deg); /* Rota até quase o final do círculo */
+    }
+    100% {
+        transform: rotate(360deg); /* Retorna para o começo do círculo */
+    }
+}
+
+/* Frase Motivacional */
+.motivational-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 30px;
+
+    width: min(90vw, 1000px);   /* ocupa os lados e limita */
+    text-align: center;
+
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 1.4;
+    white-space: normal;       /* permite quebrar linha */
+    word-break: break-word;
+
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+
+.motivational-text-day3 {
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+    margin: 100px;
+    margin-bottom: 20px;
+    margin-top: 70px;
+    font-weight: 400;
+    font-family: "Roboto Slab";
+}
+
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    .music-disk {
+        height: 60vh;
+    }
+
+    .disk {
+        width: 200px;
+        height: 200px;
+    }
+
+    .image {
+        width: 70px;
+        height: 70px;
+    }
+
+    .motivational-text {
+        font-size: 18px;
+    }
+}
+
+/* Estilos dos botões na página principal */
+.container {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Estilos dos botões */
+.btn {
+    background-color: #fff;
+    color: #6a0dad;
+    border: 2px solid #6a0dad;
+    font-size: 20px;
+    padding: 15px 30px;
+    margin: 10px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Efeito de hover nos botões */
+.btn:hover {
+    background-color: #6a0dad;
+    color: #fff;
+    transform: translateY(-5px); /* Suaviza o hover com um pequeno movimento */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Aumenta a sombra ao passar o mouse */
+}
+
+/* Efeito de brilho nos botões */
+.btn:active {
+    box-shadow: 0 0 20px rgba(106, 13, 173, 0.8);
+    transform: scale(1.05); /* Aumenta um pouco o tamanho do botão */
+}
+
+/* Animação para os botões aparecerem suavemente */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Aplicar animação nos botões */
+.buttons .btn {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Botões bloqueados (não clicáveis) */
+.btn.locked {
+    background-color: #ccc;
+    color: #999;
+    cursor: not-allowed;
+}
+
+/* A área dos botões */
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.btn-back {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #6a0dad;
+    border: none;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.btn-back:hover {
+    background-color: #6a0dad;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Botão revelar (opcional só pra ajustar no Day 3) */
+.btn-revelar {
+    margin-top: 12px;
+}
+
+/* Overlay do "pop-up" */
+.reveal-overlay {
+    position: fixed;
+    inset: 0;                 /* top/right/bottom/left: 0 */
+    z-index: 2000;
+    pointer-events: none;     /* deixa clicar nos outros itens (se quiser) */
+}
+
+/* Esconder/mostrar */
+.hidden {
+    display: none;
+}
+
+/* Imagem que aparece em posição aleatória */
+.reveal-img {
+    position: absolute;
+    max-width: min(320px, 70vw);
+    max-height: 70vh;
+    border-radius: 12px;
+    box-shadow: 0px 12px 30px rgba(0,0,0,0.45);
+    opacity: 0;
+    transform: scale(0.98);
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+/* Quando a imagem está "ativa" */
+.reveal-img.show {
+    opacity: 1;
+    transform: scale(1);
+}
+
+#btnRevelar {
+    margin-bottom: 550px;
+    font-weight: bold;
+    background-color: #6a0dad;
+    color: #fff;
+}
+
+#btnRevelar:hover{
+    background-color: #fff;
+    color: #6a0dad;
+}
+
+
+/* Camada dos "flocos" por cima de tudo */
+.fall-layer{
+  position: fixed;
+  inset: 0;
+  pointer-events: none; /* não atrapalha clicar nos botões */
+  overflow: hidden;
+  z-index: 1500;
+}
+
+/* Cada "floco" (imagem) */
+.fall-item{
+  position: absolute;
+  top: -80px;           /* começa um pouco acima */
+  will-change: transform;
+  user-select: none;
+  opacity: 0.9;
+}
