@@ -39,6 +39,9 @@ if (btnRevelar && overlay && revealImg) {
     './Imagens/Mensagem Equipe/GiseleFim.png',
     './Imagens/Mensagem Equipe/TamiresFim.png',
     './Imagens/Mensagem Equipe/PedroFim.png',
+    './Imagens/Mensagem Equipe/MatheusFim.png',
+    './Imagens/Mensagem Equipe/PereiraFim.png',
+    './Imagens/Mensagem Equipe/FerreiraFim.png',
     './Imagens/Mensagem Equipe/GuilhermeFim.png',
     './Imagens/Mensagem Equipe/TalitaFim.png',
     './Imagens/Mensagem Equipe/ThaynaFim.png',
@@ -47,6 +50,7 @@ if (btnRevelar && overlay && revealImg) {
 
   const DURACAO_MS = 10000; // 10 segundos
   const MARGEM = 40;        // margem mínima das bordas (px)
+  const fimPopup = document.getElementById('fimPopup');
 
   let rodando = false;
 
@@ -68,7 +72,7 @@ if (btnRevelar && overlay && revealImg) {
     imgEl.style.left = `${x}px`;
     imgEl.style.top = `${y}px`;
   }
-
+  
   async function mostrarSequencia() {
     if (rodando) return;
     rodando = true;
